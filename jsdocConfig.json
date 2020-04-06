@@ -1,0 +1,16 @@
+{
+    "plugins": ["node_modules/jsdoc-babel"],
+    "babel": {
+        "plugins": ["transform-flow-strip-types"]
+    },
+    "source": {
+        "includePattern": ".+\\.js(doc|x)?$",
+        "include": ["."],
+        "exclude": ["node_modules"]
+    },
+    "recurseDepth": 20,
+    "opts": {
+        "destination": "./docs/",
+        "recurse": true
+    }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "homescout-sdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --require-module @babel/polyfill --require-module @babel/register -f json:test/report/cucumber_report.json -f progress test/features/",
+    "flow-init": "flow init",
+    "flow": "flow",
+    "lint-init": "eslint --init",
+    "lint": "eslint .",
+    "wdio-config": "wdio config",
+    "wdio": "wdio run wdio.conf.js",
+    "build": "webpack --config webpack-production.config.js --env dev && webpack --config webpack-production.config.js --env build",
+    "serve": "webpack --env dev && webpack --env build",
+    "start": "webpack && webpack-dev-server",
+    "generate-docs": "jsdoc -c ./jsdocConfig.json",
+    "generate-test-report": "node test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "@wdio/cli": "^5.18.7",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.2.0",
+    "cross-fetch": "^3.0.4",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.3",
+    "jsdoc": "^3.6.3",
+    "jsdoc-babel": "^0.5.0",
+    "strip-loader": "^0.1.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "yargs": "^15.1.0"
+  },
+  "dependencies": {
+    "flow-bin": "^0.118.0",
+    "flow-typed": "^3.0.0"
+  }
+}
